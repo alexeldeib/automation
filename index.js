@@ -28,7 +28,7 @@ fetch('data.json')
 
             trace1.y.push(i+1)
             trace2.y.push(i+100)
-            trace3.x.push(i*100)
+            trace3.y.push(i*100)
         }
         console.log(trace1)
         var traces1 = [trace1, trace2];
