@@ -34,8 +34,7 @@ fetch('data.json')
         var traces1 = [trace1, trace2];
         var traces2 = [trace3]
         Plotly.newPlot('time', traces1);
-        Plotly.newPlot('bigtime', traces2);
-
+        Plotly.newPlot('bigindex', traces2);
     })
     .catch(error => console.log(error));
 
