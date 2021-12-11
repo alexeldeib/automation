@@ -29,7 +29,7 @@ jobs:
         jq . temp.json
         echo "validating data"
         jq . data.json
-        jq —-slurpfile temp temp.json '. + $temp' data.json
+        jq —-slurpfile temp temp.json '. + $temp' data.json | sponge data.json
         rm temp.json
         echo "final data"
         cat data.json
