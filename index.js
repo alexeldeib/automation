@@ -30,7 +30,7 @@ fetch('data.json')
             trace2.y.push(i+100)
             trace3.y.push(i*100)
         }
-        console.log(trace1)
+
         var traces1 = [trace1, trace2];
         var traces2 = [trace3]
         Plotly.newPlot('time', traces1);
