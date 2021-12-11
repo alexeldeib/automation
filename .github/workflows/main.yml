@@ -30,7 +30,7 @@ jobs:
         jq . temp.json
         echo "validating data"
         jq . data.json
-        jq -s '.[0] + [.[1]]' data.json temp.json
+        jq -s '.[0] + [.[1]]' data.json temp.json | sponge data.json
         rm temp.json
         echo "final data"
         cat data.json
