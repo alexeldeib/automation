@@ -27,6 +27,8 @@ jobs:
         envsubst < template.json > temp.json
         cat temp.json
         jq . temp.json
+        echo "validating data"
+        jq . data.json
         jq —-slurpfile temp temp.json '. + $temp' data.json
         rm temp.json
         echo "final data"
