@@ -20,6 +20,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    - name: echo time
+      run:  |
+        echo # automation > README.md
+        echo $(date) > README.md
     # Make changes to pull request here
     - name: Create Pull Request
       id: cpr
