@@ -23,7 +23,7 @@ jobs:
     - name: echo time
       run:  |
         sudo apt install -y gettext-base moreutils 
-        DATETIME="$(date -Iseconds)"
+        export DATETIME="$(date -Iseconds)"
         envsubst < template.json > temp.json
         cat temp.json
         jq —-slurpfile temp temp.json '. + $temp' data.json
