@@ -24,7 +24,7 @@ jobs:
       run:  |
         sudo apt install -y gettext-base moreutils 
         DATETIME="$(date -Iseconds)"
-        envsubst < template > temp.json
+        envsubst < template.json > temp.json
         cat temp.json
         jq —-slurpfile temp temp.json '. + $temp' data.json
         rm temp.json
